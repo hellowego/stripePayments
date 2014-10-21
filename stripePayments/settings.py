@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-# DIR ROOT setting
-DIR_ROOT = os.path.join(os.path.dirname(__file__), os.path.pardir)
+# add by cf
+PROJECT_DIR = os.path.join(os.path.dirname(__file__), os.path.pardir)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -57,7 +57,11 @@ WSGI_APPLICATION = 'stripePayments.wsgi.application'
 
 #TEMPLATE_LOADERS add by cf
 TEMPLATE_DIRS = (
-    os.path.join(DIR_ROOT, 'templates'),
+    os.path.join(PROJECT_DIR, 'templates'),
+)
+# add by cf
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_DIR, 'static'),
 )
 
 # Database

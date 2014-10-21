@@ -1,8 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+{% load staticfiles %}
+<title>{% block title %}base title{% endblock title%}</title>
+<script src="{%static 'js/jquery-2.0.1.min.js' %}"></script>
+<script src="{%static 'js/eldarion-ajax.js' %}"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
 <script>
     $(function() {
         $('body').on("click", '.change-card, .subscribe-form button[type=submit]', function(e) {
@@ -27,5 +32,6 @@
 </head>
 <body>
 <p>hello world</p>
+{% block body %} {% endblock body %}
 </body>
 </html>
