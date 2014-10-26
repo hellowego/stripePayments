@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
     'payments',
+    'registration',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -130,3 +131,6 @@ PAYMENTS_PLANS = {
     },
 }
 
+# add by cf for registration
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
